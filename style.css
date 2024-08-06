@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+body {
+  background: linear-gradient(45deg, #1e90ff, #ff6347);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 390px;
+  margin: 0 auto;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  animation: Bottom 1.2s ease forwards;
+  animation-delay: calc(0.3s * var(--vlr));
+  transform: translateY(100px);
+  opacity: 0;
+}
+@keyframes Bottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+header {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  animation: top 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+@keyframes top {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.input .id {
+  width: 100%;
+  padding: 0 10px;
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background: transparent;
+  outline: none;
+  border: 3px solid #00ccff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #fafbfc;
+}
+.forgot {
+  display: flex;
+  justify-content: right;
+  margin-left: 0;
+  margin-top: -10px;
+  text-decoration: none;
+  color: #b8c7ba;
+  font-size: 13px;
+}
+a:hover {
+  text-decoration: underline;
+  color: #00ccff;
+}
+.btn button {
+  text-align: center;
+  width: 100%;
+  margin: 15px 0 15px;
+  height: 60px;
+  border-radius: 30px;
+  border: 3px solid #00ccff;
+  background: transparent;
+  color: #fafbfc;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover {
+  background: #00ccff;
+}
+.sign-up {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 15px;
+}
+.sign-up a {
+  color: #b8c7ba;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #00ccff;
+}
+input::placeholder {
+  color: #dbdada;
+  transition: opacity 0.5s ease-in-out;
+}
+.sign-up a.showSignup {
+  animation: showSignup 0.5s ease-in-out forwards; /* Animation properties */
+}
+input:focus::placeholder {
+  opacity: 0;}
